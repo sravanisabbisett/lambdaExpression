@@ -48,5 +48,19 @@ namespace lambdaExpressions
                 Console.WriteLine("No we dont have tenagers in the list");
             }
         }
+        /// <summary>
+        /// Retrives the average age in the list.
+        /// </summary>
+        public void CalculateAvgAgeInTheList()
+        {
+            double age = 0;
+            foreach (Person personDetails in person.FindAll(s => s.age < 100).ToList())
+            {
+                age = age + personDetails.age;
+            }
+            Console.WriteLine(age);
+            Console.WriteLine("Average age in the list is::" + (age / person.Count));
+        }
+
     }
 }

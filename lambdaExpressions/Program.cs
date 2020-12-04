@@ -13,6 +13,8 @@ namespace lambdaExpressions
             dataManagement.RetriveFirstTwoRecords();
             Console.WriteLine("Checking wether there is teeneager in the list");
             dataManagement.CheckTeenager();
+            Console.WriteLine("calculating the average age in the list");
+            dataManagement.CalculateAvgAgeInTheList();
             Console.ReadKey();
         }
     }
