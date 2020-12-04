@@ -7,6 +7,8 @@ namespace lambdaExpressions
         static void Main(string[] args)
         {
             Console.WriteLine("Person Data Management");
+            PersonDataManagement dataManagement = new PersonDataManagement();
+            dataManagement.addDetails();
             Console.ReadKey();
         }
     }
