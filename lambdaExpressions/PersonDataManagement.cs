@@ -17,7 +17,7 @@ namespace lambdaExpressions
             person.Add(new Person("2356789", "rupika", "AswiniBuildings", 12));
             person.Add(new Person("1234567", "lakshmi", "vujayanthitraders", 23));
             person.Add(new Person("2345678", "sri", "arumodayacolony", 18));
-            person.Add(new Person("456789", "sailja", "1town", 47));
+            person.Add(new Person("456789", "sailaja", "1town", 47));
             person.Add(new Person("567890", "akhilesh", "perungudi", 25));
             person.Add(new Person("678901", "badarinath", "bantumilli", 70));
             Console.WriteLine("No of persons in list::"+person.Count);
@@ -58,7 +58,7 @@ namespace lambdaExpressions
             {
                 age = age + personDetails.age;
             }
-            Console.WriteLine(age);
+            Console.WriteLine("Total age::"+age);
             Console.WriteLine("Average age in the list is::" + (age / person.Count));
         }
 
@@ -82,6 +82,24 @@ namespace lambdaExpressions
             foreach (var Skipperson in result)
             {
                 Console.WriteLine(Skipperson.name);
+            }
+        }
+
+        /// <summary>
+        /// Removes the element in the list.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        public void RemoveElementInTheList(string name)
+        {
+            var result = person.Find(s => s.name.Equals(name));
+            if (result == null)
+            {
+                Console.WriteLine("Person didnt find in the list to remove");
+            }
+            else
+            {
+                person.Remove(result);
+                Console.WriteLine("Counting no of persons after removing one element::"+person.Count);
             }
         }
     }
