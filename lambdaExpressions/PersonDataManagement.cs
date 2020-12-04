@@ -19,7 +19,7 @@ namespace lambdaExpressions
             person.Add(new Person("2345678", "sri", "arumodayacolony", 18));
             person.Add(new Person("456789", "sailja", "1town", 47));
             person.Add(new Person("567890", "akhilesh", "perungudi", 25));
-            person.Add(new Person("678901", "badarinath", "bantumilli", 50));
+            person.Add(new Person("678901", "badarinath", "bantumilli", 70));
             Console.WriteLine("No of persons in list::"+person.Count);
         }
 
@@ -71,6 +71,18 @@ namespace lambdaExpressions
         {
             var result = person.Find(s => s.name.Equals(name));
             return result == null ? "Person is not present in the list" : "person is present in the list";
+        }
+
+        /// <summary>
+        /// Skips the records whose age less than60.
+        /// </summary>
+        public void SkipRecordsWhoseAgeLessThan60()
+        {
+            var result = person.SkipWhile(s => s.age < 60);
+            foreach (var Skipperson in result)
+            {
+                Console.WriteLine(Skipperson.name);
+            }
         }
     }
 }
