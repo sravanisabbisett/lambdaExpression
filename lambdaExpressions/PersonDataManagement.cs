@@ -33,5 +33,20 @@ namespace lambdaExpressions
                 Console.WriteLine("Name: " + personDetails.name + " Age: " + personDetails.age);
             }
         }
+
+        /// <summary>
+        /// Check wether there is teeanger in the list or not.
+        /// </summary>
+        public void CheckTeenager()
+        {
+            if (person.Any(s => (s.age >= 13 && s.age <= 18)))
+            {
+                Console.WriteLine("Yes we have tenagers in the list");
+            }
+            else
+            {
+                Console.WriteLine("No we dont have tenagers in the list");
+            }
+        }
     }
 }
