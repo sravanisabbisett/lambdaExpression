@@ -11,7 +11,7 @@ namespace lambdaExpressions
         /// <summary>
         /// Adds the details in the list.
         /// </summary>
-        public void addDetails()
+        public void AddDetails()
         {
             person.Add(new Person("2345678", "sravani", "GandhiChowk", 13));
             person.Add(new Person("2356789", "rupika", "AswiniBuildings", 12));
