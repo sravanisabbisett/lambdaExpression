@@ -62,5 +62,15 @@ namespace lambdaExpressions
             Console.WriteLine("Average age in the list is::" + (age / person.Count));
         }
 
+        /// <summary>
+        /// Checks the name persent or not.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <returns></returns>
+        public string CheckNamePersentOrNot(string name)
+        {
+            var result = person.Find(s => s.name.Equals(name));
+            return result == null ? "Person is not present in the list" : "person is present in the list";
+        }
     }
 }
