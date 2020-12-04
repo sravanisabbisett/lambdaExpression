@@ -9,6 +9,7 @@ namespace lambdaExpressions
             Console.WriteLine("Person Data Management");
             PersonDataManagement dataManagement = new PersonDataManagement();
             dataManagement.addDetails();
+            dataManagement.RetriveFirstTwoRecords();
             Console.ReadKey();
         }
     }
